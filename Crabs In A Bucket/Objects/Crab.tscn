@@ -10,7 +10,7 @@
 extents = Vector2( 15.2881, 5.11929 )
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 16.4632, 10.4074 )
+extents = Vector2( 12.1274, 7.26794 )
 
 [sub_resource type="AtlasTexture" id=3]
 flags = 4
@@ -206,7 +206,7 @@ shape = SubResource( 2 )
 position = Vector2( 0, 0.368134 )
 frames = SubResource( 32 )
 animation = "Idle"
-frame = 7
+frame = 2
 playing = true
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

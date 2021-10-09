@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Objects/TempTileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Objects/Crab.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Art Assets/Factory Background.png" type="Texture" id=3]
+[ext_resource path="res://Art Assets/FactoryBackgroundGearPipes.png" type="Texture" id=4]
+[ext_resource path="res://Levels/Gameplay/Level.gd" type="Script" id=5]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Factory Background.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 96, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "FactoryBackgroundGearPipes.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 96, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Background" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 96, 64 )
+format = 1
+
+[node name="Foreground" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -851980, 13, 0, -917493, 13, 0, -786444, 13, 0, -851957, 13, 0, -720908, 13, 0, -786421, 13, 0, -655372, 13, 0, -655367, 13, 0, -655365, 13, 0, -655363, 13, 0, -655361, 13, 0, -720896, 13, 0, -720895, 13, 0, -720893, 13, 0, -720890, 13, 0, -720885, 13, 0, -589836, 13, 0, -589831, 13, 0, -589829, 13, 0, -589827, 13, 0, -655360, 13, 0, -655357, 13, 0, -655356, 13, 0, -655354, 13, 0, -655349, 13, 0, -524300, 13, 0, -524295, 13, 0, -524293, 13, 0, -524291, 13, 0, -589824, 13, 0, -589821, 13, 0, -589819, 13, 0, -589818, 13, 0, -589813, 13, 0, -458764, 13, 0, -458758, 13, 0, -458756, 13, 0, -458753, 13, 0, -524288, 13, 0, -524287, 13, 0, -524285, 13, 0, -524282, 13, 0, -524277, 13, 0, -393228, 13, 0, -458741, 13, 0, -327692, 13, 0, -393205, 13, 0, -262156, 13, 0, -327669, 13, 0, -196620, 13, 0, -262133, 13, 0, -131084, 13, 0, -131083, 10, 0, -131082, 10, 0, -131081, 10, 0, -131080, 10, 0, -131079, 9, 0, -131078, 9, 0, -131077, 9, 0, -131076, 9, 0, -131075, 9, 0, -131074, 9, 0, -131073, 9, 0, -196608, 9, 0, -196607, 9, 0, -196606, 9, 0, -196605, 9, 0, -196604, 9, 0, -196603, 9, 0, -196602, 9, 0, -196601, 9, 0, -196600, 9, 0, -196599, 9, 0, -196598, 9, 0, -196597, 13, 0, -65548, 13, 0, -65547, 13, 0, -65546, 13, 0, -65545, 13, 0, -65544, 13, 0, -65543, 13, 0, -65542, 13, 0, -65541, 13, 0, -65540, 13, 0, -65539, 13, 0, -65538, 13, 0, -65537, 13, 0, -131072, 13, 0, -131071, 13, 0, -131070, 13, 0, -131069, 13, 0, -131068, 13, 0, -131067, 13, 0, -131066, 13, 0, -131065, 13, 0, -131064, 13, 0, -131063, 13, 0, -131062, 13, 0, -131061, 13, 0, -12, 12, 0, -11, 12, 0, -10, 12, 0, -9, 12, 0, -8, 12, 0, -7, 13, 0, -6, 13, 0, -5, 13, 0, -4, 13, 0, -3, 13, 0, -2, 13, 0, -1, 13, 0, -65536, 13, 0, -65535, 13, 0, -65534, 13, 0, -65533, 13, 0, -65532, 13, 0, -65531, 13, 0, -65530, 13, 0, -65529, 13, 0, -65528, 13, 0, -65527, 13, 0, -65526, 13, 0, -65525, 13, 0 )
+
+[node name="Crab" parent="." instance=ExtResource( 2 )]
+position = Vector2( -302.746, -109.997 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, -224 )
+current = true
+zoom = Vector2( 0.75, 0.75 )
