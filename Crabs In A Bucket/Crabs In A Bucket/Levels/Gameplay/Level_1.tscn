@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Objects/TempTileSet.tres" type="TileSet" id=1]
+[ext_resource path="res://Objects/Crab.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Art Assets/Factory Background.png" type="Texture" id=3]
+[ext_resource path="res://Art Assets/FactoryBackgroundGearPipes.png" type="Texture" id=4]
+[ext_resource path="res://Levels/Gameplay/Level.gd" type="Script" id=5]
+[ext_resource path="res://Objects/Spike.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Objects/LevelTransitioner.tscn" type="PackedScene" id=7]
+
+[sub_resource type="TileSet" id=1]
+0/name = "Factory Background.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 96, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "FactoryBackgroundGearPipes.png 1"
+1/texture = ExtResource( 4 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 96, 64 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+
+[node name="Level" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Background" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+cell_size = Vector2( 96, 64 )
+format = 1
+tile_data = PoolIntArray( -393220, 0, 0, -393219, 0, 0, -393218, 0, 0, -393217, 0, 0, -458752, 0, 0, -458751, 1, 0, -458750, 0, 0, -458749, 0, 0, -327684, 0, 0, -327683, 0, 0, -327682, 1, 0, -327681, 0, 0, -393216, 0, 0, -393215, 0, 0, -393214, 0, 0, -393213, 0, 0, -262148, 0, 0, -262147, 1, 0, -262146, 0, 0, -262145, 0, 0, -327680, 1, 0, -327679, 0, 0, -327678, 1, 0, -327677, 0, 0, -196612, 1, 0, -196611, 0, 0, -196610, 0, 0, -196609, 1, 0, -262144, 0, 0, -262143, 1, 0, -262142, 0, 0, -262141, 0, 0, -131076, 0, 0, -131075, 0, 0, -131074, 0, 0, -131073, 0, 0, -196608, 1, 0, -196607, 0, 0, -196606, 0, 0, -196605, 0, 0, -65540, 0, 0, -65539, 1, 0, -65538, 0, 0, -65537, 0, 0, -131072, 0, 0, -131071, 1, 0, -131070, 0, 0, -131069, 0, 0, -4, 0, 0, -3, 0, 0, -2, 0, 0, -1, 0, 0, -65536, 0, 0, -65535, 0, 0, -65534, 0, 0, -65533, 1, 0 )
+
+[node name="Foreground" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -131084, 11, 0, -131083, 10, 0, -131082, 10, 0, -131081, 10, 0, -131080, 10, 0, -131073, 11, 0, -196608, 9, 0, -196607, 9, 0, -196606, 9, 0, -196605, 9, 0, -196604, 9, 0, -196603, 9, 0, -196602, 9, 0, -196601, 9, 0, -196600, 9, 0, -196599, 9, 0, -196598, 9, 0, -196597, 9, 0, -65548, 13, 0, -65547, 13, 0, -65546, 13, 0, -65545, 13, 0, -65544, 13, 0, -65537, 13, 0, -131072, 13, 0, -131071, 13, 0, -131070, 13, 0, -131069, 13, 0, -131068, 13, 0, -131067, 13, 0, -131066, 13, 0, -131065, 13, 0, -131064, 13, 0, -131063, 13, 0, -131062, 13, 0, -131061, 13, 0, -12, 12, 0, -11, 12, 0, -10, 12, 0, -9, 12, 0, -8, 12, 0, -7, 14, 0, -6, 14, 0, -5, 14, 0, -4, 14, 0, -3, 14, 0, -2, 14, 0, -1, 12, 0, -65536, 12, 0, -65535, 12, 0, -65534, 12, 0, -65533, 12, 0, -65532, 12, 0, -65531, 12, 0, -65530, 12, 0, -65529, 12, 0, -65528, 12, 0, -65527, 12, 0, -65526, 12, 0, -65525, 12, 0 )
+
+[node name="Crab" parent="." instance=ExtResource( 2 )]
+position = Vector2( -302.746, -109.997 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, -224 )
+current = true
+zoom = Vector2( 0.75, 0.75 )
+
+[node name="NextLevel" parent="Camera2D" instance=ExtResource( 7 )]
+position = Vector2( 332.049, 110.856 )
+
+[node name="Spike" parent="." instance=ExtResource( 6 )]
+position = Vector2( -206.662, -17.4132 )
+
+[node name="Spike2" parent="." instance=ExtResource( 6 )]
+position = Vector2( -173.959, -19.1971 )
+
+[node name="Spike3" parent="." instance=ExtResource( 6 )]
+position = Vector2( -141.85, -19.1971 )
+
+[node name="Spike4" parent="." instance=ExtResource( 6 )]
+position = Vector2( -109.147, -18.0078 )
+
+[node name="Spike5" parent="." instance=ExtResource( 6 )]
+position = Vector2( -78.2276, -16.8186 )
+
+[node name="Spike6" parent="." instance=ExtResource( 6 )]
+position = Vector2( -47.9028, -18.6024 )
