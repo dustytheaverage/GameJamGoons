@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "EditorVCSInterface",
+"base": "",
 "class": "GitAPI",
 "language": "NativeScript",
 "path": "res://addons/godot-git-plugin/git_api.gdns"
@@ -21,7 +21,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Crabs in a Bucket"
+run/main_scene="res://Levels/Gameplay/Level_1.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Global="*res://scripts/global.gd"
 
 [gdnative]
 
@@ -53,6 +58,11 @@ Jump={
 Grapple={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":76,"unicode":0,"echo":false,"script":null)
+ ]
+}
+Reset={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":82,"unicode":0,"echo":false,"script":null)
  ]
 }
 

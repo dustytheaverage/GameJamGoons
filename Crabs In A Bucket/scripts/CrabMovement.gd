@@ -2,10 +2,10 @@ extends KinematicBody2D
 
 
 # Declare member variables here. Examples:
-var speed = 300
+var speed = 200
 var canJump = true
-const JUMP_FORCE = 200
-const GRAVITY = 200
+const JUMP_FORCE = 250
+const GRAVITY = 400
 var currentGravity = GRAVITY
 var dying = false
 var startPosition
@@ -51,6 +51,9 @@ func _movement_inputs():
 func _input(event):
 	if event.is_action_pressed("Jump") and canJump and !dying:
 		velocity.y = -JUMP_FORCE
+		
+	if event.is_action_pressed("Reset"):
+		get_tree().change_scene("res://Levels/Gameplay/Level_" + str(Global.level) + ".tscn")
 
 
 func _grapple():
